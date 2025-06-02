@@ -13,4 +13,4 @@ services:
       - MAKE_BACKUP=N
       - BOT_TOKEN=
       - CHAT_ID=
-    image: johnlucajf/auto-m4b
+    image: johnlucajf/auto-m4b:latest
