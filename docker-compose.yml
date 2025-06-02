@@ -1,8 +1,7 @@
 version: '3.7'
 services:
   auto-m4b:
-    #image: seanap/auto-m4b
-    build: .
+    hostname: auto-m4b
     container_name: auto-m4b
     volumes:
       - ./config:/config
@@ -12,3 +11,6 @@ services:
       - PGID=1000
       - CPU_CORES=2
       - MAKE_BACKUP=N
+      - BOT_TOKEN=
+      - CHAT_ID=
+    image: johnlucajf/auto-m4b
