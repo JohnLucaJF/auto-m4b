@@ -121,6 +121,9 @@ while [ $m -ge 0 ]; do
 						mkdir "${file%.*}"
 						mv "$file" "${file%.*}"
 					fi
+     	                        curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+    -d chat_id="${CHAT_ID}" \
+    -d text="📚 Conversion and processing of audiobook '$book' completed on $(date)."
 				done
 				echo Deleting duplicate mp3 audiobook folder
 			fi
