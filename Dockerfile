@@ -114,8 +114,6 @@ ENV PUID=""
 ENV PGID=""
 ENV CPU_CORES=""
 ENV SLEEPTIME=""
-ENV BOT_TOKEN=""
-ENV CHAT_ID=""
 
 #Merge-Script importieren
 ADD runscript.sh /etc/service/bot/run
