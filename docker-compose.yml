@@ -11,6 +11,6 @@ services:
       - PGID=1000
       - CPU_CORES=2
       - MAKE_BACKUP=N
-      - BOT_TOKEN=
-      - CHAT_ID=
+      - BOT_TOKEN=<BOT_TOKEN>
+      - CHAT_ID=<CHAT_ID>
     image: johnlucajf/auto-m4b:latest
