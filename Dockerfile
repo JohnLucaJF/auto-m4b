@@ -114,6 +114,8 @@ ENV PUID=""
 ENV PGID=""
 ENV CPU_CORES=""
 ENV SLEEPTIME=""
+ENV BOT_TOKEN=""
+ENV CHAT_ID=""
 
 #Merge-Script importieren
 ADD runscript.sh /etc/service/bot/run
@@ -123,7 +125,7 @@ ADD auto-m4b-tool.sh /
 #RUN echo "---- INSTALL M4B-TOOL ----" && \
 #    wget https://github.com/sandreas/m4b-tool/releases/download/v.0.4.2/m4b-tool.phar -O /usr/local/bin/m4b-tool && \
 #    chmod +x /usr/local/bin/m4b-tool
-ARG M4B_TOOL_DOWNLOAD_LINK="https://github.com/sandreas/m4b-tool/releases/latest/download/m4b-tool.tar.gz"
+ARG M4B_TOOL_DOWNLOAD_LINK="https://github.com/sandreas/m4b-tool/releases/download/v0.5.2/m4b-tool-0.5.2.zip"
 RUN echo "---- INSTALL M4B-TOOL ----" \
     && if [ ! -f /tmp/m4b-tool.phar ]; then \
             wget "${M4B_TOOL_DOWNLOAD_LINK}" -O /tmp/m4b-tool.tar.gz && \
